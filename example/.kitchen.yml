@@ -11,7 +11,7 @@ verifier:
     - name: basic
       backend: local
       attrs_outputs:
-        client: public_dns_vault
+        vault: public_dns_vault
 
 platforms:
   - name: terraform

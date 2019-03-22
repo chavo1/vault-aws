@@ -7,10 +7,9 @@ module "vault-terraform" {
   instance_type = "${var.instance_type}"
   key_name      = "${var.key_name}"
   subnet        = "${var.subnet}"
-  client_count  = "${var.vault_count}"
+  vault_count   = "${var.vault_count}"
 }
 
-output "public_dns_servers" {
-  value = "${module.vault-terraform.public_dns_servers}"
+output "public_dns_vault" {
+  value = "${module.vault-terraform.public_dns_vault}"
 }
-
