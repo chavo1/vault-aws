@@ -1,6 +1,5 @@
 # This example contains a demo of [Vault](https://www.vaultproject.io/) in AWS over HTTPS
 
-```
 - Create terraform.tfvars file with needed credential and variables:
 ```
 access_key = "< Your AWS Access_key >"
@@ -36,3 +35,12 @@ kitchen verify
 kitchen destroy
 ```
 - Kitchen-Terraform tests are for 1 Vault server and should be as follow:
+
+```
+  Command: `terraform state list`
+     ✔  stdout should include "module.vault-terraform.aws_instance.vault"
+     ✔  stderr should include ""
+     ✔  exit_status should eq 0
+
+Test Summary: 3 successful, 0 failures, 0 skipped
+```
